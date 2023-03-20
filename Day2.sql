@@ -19,6 +19,7 @@ SQL 연산자
     like: 패턴으로 문자열을 검색해여 값이 존재하면 true 아니면 false    
 */
 
+
 # 데이터 검색
 # select 필드면1, 필드명2 ... from 테이블명;
 select 100;
@@ -67,6 +68,11 @@ update member set point=300 where userid='grapes';
 select * from member;
 select userid, username, point from member where point between 300 and 600;
 select userid, username, point from member where point >= 300 and point <= 600;
+
+# in
+select * from member;
+# 포인트가 300, 450인 회원을 모두 출력
+select * from member where point in (300, 450);
 
 # like 연산자
 select userid, username from member where userid like 'a%'; -- a로 시작하는 문자열
